@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Image/Anchor Elements</title>
+  </head>
+  <body>
+    <h1>Target Attribute Example</h1>
+
+    <iframe src="test.html" width="300" height="200" name="childframe"></iframe>
+
+    <p>
+      <a href="https://www.example.com" target="childframe"
+        >Open in Named Frame</a
+      >
+    </p>
+    <hr />
+    <a href="https://react.dev/" target="_top">Click Top</a><br />
+    <a href="https://react.dev/" target="_self">Click Self</a><br />
+    <a href="https://react.dev/" target="_parent">Click Parent</a><br />
+    <a href="https://react.dev/" target="_blank">Click Blank</a><br />
+    <hr />
+    <a href="https://react.dev/" target="_blank">
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/120px-React_Logo_SVG.svg.png"
+        alt="It' my Image"
+        width="100px"
+        height="100px"
+      />
+    </a>
+    <hr />
+    <a href="" download="C:\Users\Lenovo\Pictures\Screenshots\123.png">
+      Download
+    </a>
+  </body>
+</html>
