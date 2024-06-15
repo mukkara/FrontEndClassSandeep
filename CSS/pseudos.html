@@ -1,0 +1,128 @@
+<!-- //Pseudo-Classes & Pseudo-Elements
+//-------------------------------- -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Pseudo-Classes */
+        
+        /* :hover */
+        a:hover {
+            color: red; /* Changes link color to red when hovered */
+        }
+
+        /* :active */
+        a:active {
+            color: blue; /* Changes link color to blue when clicked */
+        }
+
+        /* :focus */
+        input:focus {
+            border: 2px solid green; /* Changes border to green when focused */
+        }
+
+        /* :first-child */
+        p:first-child {
+            font-weight: bold; /* Makes the first paragraph bold */
+        }
+
+        /* :last-child */
+        div:last-child {
+            color: red; /* Changes the color of the last div to red */
+        }
+
+        /* :nth-child(n) */
+        li:nth-child(2) {
+            background-color: yellow; /* Changes background color of the second list item */
+        }
+
+        /* :nth-of-type(n) */
+        p:nth-of-type(2) {
+            color: blue; /* Changes the second paragraph color to blue */
+        }
+
+        /* :not(selector) */
+        p:not(.highlight) {
+            color: grey; /* Changes color of paragraphs not having class 'highlight' to grey */
+        }
+
+        /* :checked */
+        input[type="checkbox"]:checked + label::before {
+            content: '✓'; /* Adds a checkmark before the label when checkbox is checked */
+            color: green; /* Sets the color of the checkmark */
+            margin-right: 5px; /* Adds some space between the checkmark and the label */
+        }
+
+        /* :disabled */
+        input:disabled {
+            background-color: lightgray; /* Changes background of disabled input to light gray */
+        }
+
+        /* :enabled */
+        input:enabled {
+            background-color: white; /* Changes background of enabled input to white */
+        }
+
+        /* Pseudo-Elements */
+        
+        /* ::after */
+        p::after {
+            content: " - end"; /* Adds '- end' after the paragraph */
+            color: blue;
+        }
+
+        /* ::before */
+        h2::before {
+            content: "Note: "; /* Adds 'Note: ' before the heading */
+            color: red;
+        }
+
+        /* ::first-letter */
+        p::first-letter {
+            font-size: 2em; /* Makes the first letter twice as big */
+            color: green;
+        }
+
+        /* ::first-line */
+        p::first-line {
+            font-weight: bold; /* Makes the first line bold */
+            color: purple;
+        }
+
+        /* ::selection */
+        ::selection {
+            background: yellow; /* Changes background color of selected text to yellow */
+            color: black;
+        }
+    </style>
+    <title>Pseudo-Classes & Pseudo-Elements</title>
+</head>
+<body>
+    <h2>Hover, Focus, and Click</h2>
+    <a href="#">Hover and click me</a><br>
+    <input type="text" placeholder="Focus on me"><br>
+    <input type="checkbox" id="check" checked>
+    <label for="check">Checked checkbox</label><br>
+    <input type="text" disabled placeholder="Disabled input"><br>
+    <input type="text" placeholder="Enabled input"><br>
+    
+    <h2>Child Selectors</h2>
+    <p class="highlight">First paragraph (first-child and nth-of-type).</p>
+    <p>Second paragraph (nth-of-type).</p>
+    <p>Third paragraph.</p>
+    <div>First div.</div>
+    <div>Last div (last-child).</div>
+
+    <h2>List Items</h2>
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2 (nth-child).</li>
+        <li>List item 3</li>
+    </ul>
+
+    <h2>Pseudo-Elements</h2>
+    <p>This is a paragraph with various pseudo-elements.</p>
+</body>
+</html>

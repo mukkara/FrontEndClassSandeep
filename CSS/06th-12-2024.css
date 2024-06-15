@@ -1,0 +1,12 @@
+body{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+#acc_id{
+    margin: 10px;
+}
+
+#btnPri{
+    background-color: brown;
+}

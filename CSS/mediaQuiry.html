@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Design Example</title>
+    <style>
+        /* Base Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        header, footer {
+            background-color: #005d99;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            width: 100%;
+        }
+
+        header nav a, footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1em;
+        }
+
+        header nav a:hover, footer a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .sidebar, .main-content {
+            padding: 1em;
+        }
+
+        .sidebar {
+            background-color: #f4f4f4;
+        }
+
+        .main-content {
+            background-color: #e4e4e4;
+            flex: 1;
+        }
+
+        /* Media Query for Medium Devices (min-width: 600px) */
+        @media (min-width: 600px) {
+            main {
+                flex-direction: row;
+            }
+
+            .content {
+                flex-direction: row;
+                flex: 1;
+            }
+
+            .sidebar {
+                flex: 1 1 25%;
+                max-width: 25%;
+            }
+
+            .main-content {
+                flex: 1 1 75%;
+                max-width: 75%;
+            }
+        }
+
+        /* Media Query for Large Devices (min-width: 1024px) */
+        @media (min-width: 1024px) {
+            .sidebar {
+                flex: 1 1 20%;
+                max-width: 20%;
+            }
+
+            .main-content {
+                flex: 1 1 80%;
+                max-width: 80%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Responsive Web Design [Media Quiry]</h1>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <div class="content">
+            <aside class="sidebar">
+                <h2>Sidebar</h2>
+                <p>Links and additional information.</p>
+            </aside>
+            <div class="main-content">
+                <h2>Main Content</h2>
+                <p>This is the main content area where articles or primary information will be displayed.</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Responsive Design Co.</p>
+        <p>Follow us on 
+            <a href="#facebook">Facebook</a>, 
+            <a href="#twitter">Twitter</a>, 
+            <a href="#instagram">Instagram</a>
+        </p>
+    </footer>
+</body>
+</html>

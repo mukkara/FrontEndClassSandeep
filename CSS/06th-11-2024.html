@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <link link rel="stylesheet" type="text/css"  href="06th-11-2024.css">
+    <style>
+        /* d position */
+        span{
+            color: red;
+            font-size: 14px;
+        }
+        /* c position */
+        .gm_a{
+            color: blue;
+            font-size: 18px;
+        }
+        /* b position */
+        #gm_b{
+            color: yellow; 
+            font-size: 18px;
+            
+        }
+
+p{
+    color:blueviolet
+}
+
+#p_class{
+    background-color: red;
+    color: #fff;
+    &:hover{
+        background-color: blue;
+    }
+}
+.p_new_class::selection{
+    font-size: 18px;
+    color: red;
+}
+    </style>
+
+</head>
+<body>
+    <h1>Specificity Hierarchy</h1>
+    <ol type="a">
+        <li> Inline Style</li>
+        <li> ID Selector</li>
+        <li> Class Selector | Attribute Selector </li>
+        <li> Element Selector | Pseudo Element</li>
+    </ol>
+    <hr>
+    <!-- [0,0,0,1] -->
+    <p > Four Value Taking:-  [a, b, c, d] Left to Right</p>
+    <hr>
+    <div>
+        <!-- [0, 0, 0, 1] -->
+        <span id="gm_b" class="gm_a" style="color: turquoise;">Hi Good Morning </span>
+        <!-- span ->  0,0,0,1 -->
+        <!-- .gm_a -> 0,0,1,0 -->
+        <!-- #gm_b -> 0,1,0,0 -->
+        <!-- inline -> 1,0,0,0 -->
+    </div>
+    <hr>
+    <button id="p_class">Add</button>
+    <hr>
+    <p class="p_new_class">Hi Every One
+        <br>
+        this is CSS</p>
+
+    
+</body>
+</html>

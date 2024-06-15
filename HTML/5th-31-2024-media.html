@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Audio Video</title>
+  </head>
+  <body>
+    <audio controls>
+      <source src="http://localhost:5500/HTML/audio.mp3" type="audio/mpeg" />
+    </audio>
+    <hr />
+    <video
+      controls
+      autoplay
+      loop
+      muted
+      width="200px"
+      height="300px"
+      poster="http://localhost:5500/HTML/youtubeLogo.png"
+    >
+      <source src="http://localhost:5500/HTML/video.mp4" type="video/mp4" />
+    </video>
+    <hr />
+    <marquee
+      behavior="alternate"
+      direction="left"
+      scrollamount="10"
+      loop="2"
+      bgcolor="red"
+    >
+      Hi Very Good Evening
+    </marquee>
+    <form>
+      <input list="myContetnt" />
+      <datalist id="myContetnt">
+        <option value="html"></option>
+        <option value="css"></option>
+        <option value="js"></option>
+      </datalist>
+      <select>
+        <option value="">Select One</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="js">JS</option>
+      </select>
+    </form>
+    <hr />
+    <p>
+      <abbr title="Hyper Text Markep Lanaguage"> HTML </abbr>
+    </p>
+  </body>
+</html>
