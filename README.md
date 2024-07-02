@@ -1,4 +1,4 @@
-I'll Cover below Topics in Detaild
+I'll Cover
 
 HTML
 
