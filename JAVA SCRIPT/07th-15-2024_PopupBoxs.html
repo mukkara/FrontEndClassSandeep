@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <p>PopUp Boxes     </p>
+    <ol>
+        <li>Alert</li>
+        <li>Prompt</li>
+        <li>confirm</li>
+    </ol>
+    <div>
+        <button onclick="alertAction()">Alert Button</button>
+        <button onclick="PromptAction()">Prompt Button</button>
+        <button onclick="confirmAction()">Confirm Button</button>
+    </div>
+    <script>
+        function alertAction(){
+            alert("Hi Evry One !!!")
+        }
+
+        function PromptAction(){
+            let abcData= prompt("Enter your name ?");
+            console.log("abcData Value:", abcData);
+            alert("Hellow "+(abcData ? abcData : "Dude")+ "!");
+        }
+        function confirmAction(){
+            let xyzData = confirm("Ar you okay today???");
+            console.log("xyzData --->:", xyzData)
+        }
+        
+             
+
+    </script>
+       
+    
+</body>
+</html>
+
