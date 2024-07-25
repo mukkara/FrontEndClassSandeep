@@ -1,0 +1,46 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class</title>
+</head>
+<body>
+    <div>
+        <p id="abc1">Good Morning</p>
+        <div class="abc2">
+            <div>
+                Good Afternoon -2(After Lunch)
+            </div>
+            <span>
+                Good Afternoon -1(Before Lunch)
+                <h6 style="color: #fff; display: inline;">Hi Ranga 1</h6>
+                <h6 style="color: #fff; display: inline;">Hi Ranga 2</h6>
+            </span>
+            <span>
+                Good Afternoon -1.1(Before Lunch)
+            </span>
+        </div>
+        <p class="abc2">Good Night -----</p>
+    </div>
+
+    <script>
+      
+
+        let abcClassTwo = document.querySelectorAll('.abc2 span');
+        console.log("abcClassTwo:", abcClassTwo)
+
+
+        abcClassTwo.forEach(item=>{            
+            item.style.background= 'green'
+            item.style.color= '#fff'
+            item.style.fontSize= '24px'
+            item.style.padding= '10px 20px'
+        })
+
+
+    </script>
+
+
+</body>
+</html>

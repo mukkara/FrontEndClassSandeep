@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class</title>
+</head>
+<body>
+    <h4 id="abcOne">Hi Every One</h4>
+    <h4 id="abcOne1">Hi Every One</h4>
+    <form onsubmit="return mainValid()">
+
+        <label>My NAME:- </label>
+        <input type="email" id="abcInput"/>
+        <input type="submit" id="abcSubmit" value="submit" />
+
+    </form>
+     <script>
+         let myData = document.getElementById("abcOne")
+         myData.style.color="blue"
+         myData.style.fontSize="36px"
+         myData.style.fontWeight="700"
+                //  document.getElementById("abcOne").style.color="blue";
+                //  document.getElementById("abcOne").style.fontSize="30px";
+                //  document.getElementById("abcOne").style.width="10px"
+                //  document.getElementById("abcOne").style.fontWeight="bold";
+                // ----------------------------------------------------
+     
+
+        console.log("myData:", myData)
+        function mainValid(){
+
+
+            let formValidation = document.getElementById("abcInput").value;
+    
+            console.log("formValidation:", formValidation);
+            if(!abcValidate(email)){
+                console.log("Invalid Email");
+                return false
+
+            }
+            return true
+        }
+
+
+        function abcValidate(email){
+            console.log("My Email:", email)
+            let myVali = `[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$`;
+
+            return myVali.test(email)
+
+        }
+
+        
+
+
+     </script>
+</body>
+</html>

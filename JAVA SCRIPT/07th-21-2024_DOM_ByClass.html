@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class</title>
+</head>
+<body>
+    <h4 class="abcClass">I'm Ranga</h4>
+    <h5 class="abcClass">You are Sandeep</h5>
+    <script>
+        let abcClassOne = document.getElementsByClassName("abcClass");
+        console.log("abcClassOne:", abcClassOne)
+
+        let abcClassTwo = document.getElementsByClassName("abcClass");
+        for(var item = 0; item < abcClassTwo.length; item++){
+            // abcClassTwo[item].innerHTML= `<i style="color:red">We Both are Friends</i>`
+            // abcClassTwo[item].innerText= `<i style="color:red">We Both are Friends</i>`
+            abcClassTwo[item].style.margin= '100px'
+            
+        }
+
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class</title>
+</head>
+<body>
+
+        <p id="abc1">Good Morning</p>
+        <!-- <p>Good AfterNoon</p> -->
+        <p class="abc2">Good Night</p>
+
+
+    <script>
+      
+
+        let abcClassTwo = document.createElement('p');
+        abcClassTwo.innerHTML="Good AfterNoon"; //<p>Good AfterNoon</p>
+
+        // let data = document.getElementById('abc1')
+        // console.log("Data:", data)
+
+        // data.appendChild(abcClassTwo);
+
+
+        let data = document.getElementsByClassName('abc2')
+        console.log("Data:", data)
+        
+        data[0].appendChild(abcClassTwo);
+
+
+
+    </script>
+
+
+</body>
+</html>

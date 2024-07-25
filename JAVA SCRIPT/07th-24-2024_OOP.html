@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opp</title>
+</head>
+
+<body>
+    <h4>OOP[Object Oriented Programming] [ProtoType Base Lang]</h4>
+    <ol>
+        <li>Objects</li>
+        <li>Classes [ES6 Future]</li> <!-- Blue Print-->
+        <li>Encapsulation</li>
+        <li>Inheritance</li>
+        <li>Polymorphism</li>
+    </ol>
+    <script>
+
+        //Object
+         const abc = {
+            name:"Ranga",
+            age:30,
+            location:"Hyd"
+         }
+
+         console.log("Youe Name:1", abc.location)
+         console.log("Youe Name:2", abc['location'])
+
+         //Class
+
+         class Persons{
+            constructor(fname,lname){
+                this.fname =fname
+                this.name =lname
+            }
+         }
+         const myPer1= new Persons("RSR", "Mukkara");
+         const myPer2= new Persons("Sandeep", "123");
+         console.log("Person 1", myPer1)
+         console.log("Person 2", myPer2)
+// --------------------------------------------------------------------------
+         //Encapsulation
+        //   --->Function Scope
+        //   ---->Closure
+        //   ---->Housting
+// -----------------------Function Scope---------------------------------
+        function myData(){
+            var name=`I'm Ranga`;
+            console.log("Print: 1", name)
+        }
+
+        myData();
+        console.log("Print: 2", name)
+// ----------------------Closure -----------------------------------------
+        function myDataParent(){
+            const nameData=`I'm Ranga`;
+            const myDataChild = ()=>{
+
+                console.log("Print: 11", nameData)
+            }
+            myDataChild()
+        }
+        myDataParent();
+        // console.log("Print: 22", nameData)
+// -----------------------------------------------------------------
+// console.log("My Name Not Assigned:", myName)
+
+// let myName = "RSR Mukkara"
+
+
+//Inheritance
+let yourName = {name:"Sandeep"};
+console.log("Youe Name:", yourName)
+
+
+// -----------------------------------
+const myYoueData = (a,b)=>{
+    return (b+" "+a);
+}
+console.log("myYoueData:", myYoueData([1,2],[10,20]))
+console.log("myYoueData:", myYoueData("Ranga ", " Sandeep"))
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+
+<body>
+    <h4>This Key Word</h4>
+<a href="https://www.freecodecamp.org/news/the-this-keyword-in-javascript/" target="_blank"> This Keyword Document Raferance </a>
+    <script>
+        // "use strict";
+
+        const myFullData11 = {
+            fname: "Ranga",
+            Lname: "Mukkara"
+
+        }
+
+        const myFullData2 = {
+            fname: "Ranga",
+            Lname: "Mukkara",
+            age: 30,
+            skills: ['react', 'angular', 'node', 'Google Chromw', 'Redux'],
+            fullName: function () {
+                return console.log("Your Full Name:-", this.Lname)
+            }
+        }
+        myFullData2.fullName()
+// ----------------------
+        function test() {
+            console.log('this in a function', this);
+        }
+        test()
+// ----------------------
+        const show = () => this
+        console.log('arrow function this', show())
+// ----------------------
+        const person = {
+            name: 'Pedro',
+            surname: 'Sanchez',
+            sayName: () => this.name + ' ' + this.surname
+        }
+        console.log(person.sayName());
+// ----------------------
+
+    </script>
+
+</body>
+
+</html>

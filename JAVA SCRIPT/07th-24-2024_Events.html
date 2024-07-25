@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>Mouse Events</li>
+        <li>Keboard Events</li>
+    </ul>
+    <hr/>
+    <button onclick="abc()">My Button 1</button>
+    <button id="myEventBtnRSR2">My Button 2</button>
+    <button id="myEventBtnRSR3">My Button 3</button>
+    <button id="myEventBtnRSR4">My Button 4</button>
+    <br/>
+    <br/>
+    <select id="myEventBtnRSR1">
+        <option>Select</option>
+        <option value="one">Ranga 1</option>
+        <option value="two"2>Ranga 2</option>
+    </select>
+    <br/>
+    <br/>
+    <input type="text" id="myFormInputRSR"  placeholder="Enter Your Name"/>
+    <script>
+        function abc(){
+            console.log("My Click: 1")
+        }
+        document.getElementById("myEventBtnRSR2").addEventListener('click',(e)=>{
+            console.log("My Single Click:")
+        } );
+
+        document.getElementById("myEventBtnRSR3").addEventListener('dblclick',(e)=>{
+            console.log("My Double click:")
+        } );
+
+        document.getElementById("myEventBtnRSR4").addEventListener('mouseover',(e)=>{
+            console.log("My MouseOver click:")
+        } );
+
+        //mouseout; mouseup; mousemove ; mousedown
+
+        document.getElementById("myEventBtnRSR1").addEventListener('change',(e)=>{
+            console.log("My input Change:",e.target.value)
+        } );
+
+        document.getElementById("myFormInputRSR").addEventListener('keydown',(e)=>{
+            // console.log("My keyBoard click:",e)
+            if(e.ctrlKey){
+                console.log("Ctrl Btn + "+e.key+" Was pressed")
+            }
+        } );
+
+    </script>
+</body>
+
+</html>

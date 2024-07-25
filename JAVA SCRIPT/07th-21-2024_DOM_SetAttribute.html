@@ -1,0 +1,39 @@
+<!-- <!DOCTYPE html> -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class</title>
+</head>
+<body>
+
+<img id="myImage" 
+src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/React_Logo_SVG.svg/180px-React_Logo_SVG.svg.png"
+/>
+
+    <script>
+      setTimeout(()=>{
+
+          let myValue = document.getElementById("myImage");
+          myValue.setAttribute('width', '10px')
+      }, 5000)
+
+      setTimeout(()=>{
+
+        let myValue = document.getElementById("myImage");
+        myValue.setAttribute('width', '200px')
+        }, 10000)
+        
+
+        setTimeout(()=>{
+//Custom Attribute adding to DOM
+        let myValue = document.getElementById("myImage");
+        myValue.setAttribute('my-name-is', 'Ranga')
+        }, 12000)
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class</title>
+</head>
+<body>
+    <p>Good Morning</p>
+    <p>Good Afternoon</p>
+    <p>Good Night</p>
+
+    <script>
+      
+
+        let abcClassTwo = document.getElementsByTagName('p');
+        console.log("abcClassTwo:", abcClassTwo)
+        for(var item = 0; item < abcClassTwo.length; item++){
+            abcClassTwo[1].innerHTML= `<i style="color:red">Good Day</i>`
+            // abcClassTwo[item].innerText= `<i style="color:red">We Both are Friends</i>`
+            // abcClassTwo[item].style.margin= '100px'
+            
+        }
+
+
+    </script>
+
+
+</body>
+</html>

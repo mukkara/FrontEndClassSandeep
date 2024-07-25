@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul>
+        <li>SetTimeout</li>
+        <li>SetInterval</li>
+        <li>clearInterval</li>
+    </ul>
+    <script>
+        //SetTimeOutMethod
+        setTimeout(() => {
+            console.log("Good Morning Bro !!!")
+        }, 2000)
+
+        // SetInterval && ClearInterval
+        function ourmessage() {
+            console.log("Good Afternon !!!")
+        }
+
+        let myMessage = setInterval(ourmessage, 500)
+
+        setTimeout(
+            () => {
+                clearInterval(myMessage)
+
+            }, 10000 )
+
+
+
+
+
+    </script>
+</body>
+
+</html>
